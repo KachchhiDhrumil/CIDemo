@@ -1,6 +1,7 @@
-name: Playwright Tests
+name: Second Playwright Tests
 on:
   workflow_dispatch:
+  workflow: ["Playwright Tests"]
   push:
     branches: [ main, master ]
   pull_request:
