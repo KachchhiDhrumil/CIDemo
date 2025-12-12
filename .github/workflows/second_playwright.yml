@@ -6,9 +6,11 @@ on:
 jobs:
   test:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    timeout-minutes: 60
+    timeout-minutes: 120
     runs-on: ubuntu-latest
     steps:
+    - name: Wait 30 minutes before starting
+      run: sleep 1800 
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
