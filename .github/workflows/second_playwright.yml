@@ -1,6 +1,5 @@
 name: Second Playwright Tests
 on:
-  workflow_dispatch:
   workflow: ["Playwright Tests"]
       types: [completed]
   push:
